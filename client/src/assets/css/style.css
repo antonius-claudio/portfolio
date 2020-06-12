@@ -1,0 +1,40 @@
+body {
+    background-color: #3c2803;
+}
+
+.boxNavbar {
+    background-color: #3c2803 !important;
+}
+
+.containerNavbar {
+    justify-content: space-between;
+}
+
+.desktopMenu a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.desktopMenu a:hover{
+    color: #ffc457;
+}
+
+@media only screen and (max-width: 600px) {
+    .desktopMenu {
+      display: none;
+    }
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.mobileMenu a li button{
+    color: #ece1d4;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobileMenu {
+        display: contents;
+    }
+}
