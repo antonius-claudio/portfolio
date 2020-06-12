@@ -14,7 +14,11 @@ body {
     padding: 0px !important;
 }
 
-.desktopMenu a{
+.activePage span{
+    color: #ffc457;
+}
+
+.desktopMenu a {
     text-decoration: none;
     color: #fff;
 }
@@ -33,8 +37,12 @@ body {
     display: none;
 }
 
-.mobileMenu a button{
-    color: #fbf6f2cf !important;
+.mobileMenu a button {
+    color: #fbf6f2cf;
+}
+
+.activePageMobile {
+    color: #ffc457;
 }
 
 @media only screen and (max-width: 600px) {
