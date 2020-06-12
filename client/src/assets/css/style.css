@@ -10,6 +10,10 @@ body {
     justify-content: space-between;
 }
 
+.MuiToolbar-gutters {
+    padding: 0px !important;
+}
+
 .desktopMenu a{
     text-decoration: none;
     color: #fff;
@@ -29,12 +33,24 @@ body {
     display: none;
 }
 
-.mobileMenu a li button{
-    color: #ece1d4;
+.mobileMenu a button{
+    color: #fbf6f2cf !important;
 }
 
 @media only screen and (max-width: 600px) {
     .mobileMenu {
         display: contents;
     }
+
+}
+
+.image404 {
+    width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+    .image404 {
+        width: 80%;
+    }
+
 }

@@ -40,39 +40,39 @@ export default function NavigationBar () {
                     </div>
                 <div className="mobileMenu">
                     <Link to='/'>
-                        <MenuItem>
+                        {/* <MenuItem> */}
                             <IconButton>
                                 <HomeIcon />
                             </IconButton>
-                        </MenuItem>
+                        {/* </MenuItem> */}
                     </Link>
                     <Link to='/profile'>
-                        <MenuItem>
+                        {/* <MenuItem> */}
                             <IconButton>
                                 <FaceIcon />
                             </IconButton>
-                        </MenuItem>
+                        {/* </MenuItem> */}
                     </Link>
                     <Link to='/experience'>
-                        <MenuItem>
+                        {/* <MenuItem> */}
                             <IconButton>
                                 <WorkIcon />
                             </IconButton>
-                        </MenuItem>
+                        {/* </MenuItem> */}
                     </Link>
                     <Link to='/projects'>
-                        <MenuItem>
+                        {/* <MenuItem> */}
                             <IconButton>
                                 <FolderIcon />
                             </IconButton>
-                        </MenuItem>
+                        {/* </MenuItem> */}
                     </Link>
                     <Link to='/contact'>
-                        <MenuItem>
+                        {/* <MenuItem> */}
                             <IconButton>
                                 <ContactMailIcon />
                             </IconButton>
-                        </MenuItem>
+                        {/* </MenuItem> */}
                     </Link>
                 </div>
             </Toolbar>
