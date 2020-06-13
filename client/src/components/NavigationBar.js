@@ -21,11 +21,11 @@ export default function NavigationBar () {
     return (
         <AppBar position="static" className="boxNavbar">
             <Toolbar className="containerNavbar">
-                    <Link to='/'>
+                    {/* <Link to='/'>
                         <IconButton edge="start" color="inherit" aria-label="menu">
-                            <img src="/logo.png" style={{width: '40px'}}/>
+                            <img src="/logo.png" style={{width: '40px'}} alt='claudio logo'/>
                         </IconButton>
-                    </Link>
+                    </Link> */}
                     <div className="desktopMenu">
                         <Link to='/'>
                         {url === '/' ? 

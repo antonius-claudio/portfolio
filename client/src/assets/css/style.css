@@ -1,13 +1,13 @@
 body {
-    background-color: #3c2803;
+    background-color: #112831;
 }
 
 .boxNavbar {
-    background-color: #3c2803 !important;
+    background-color: #31424e !important;
 }
 
 .containerNavbar {
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .MuiToolbar-gutters {
@@ -16,6 +16,10 @@ body {
 
 .activePage span{
     color: #ffc457;
+}
+
+.desktopMenu {
+    font-family: monospace;
 }
 
 .desktopMenu a {
@@ -27,7 +31,7 @@ body {
     color: #ffc457;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
     .desktopMenu {
       display: none;
     }
@@ -45,7 +49,7 @@ body {
     color: #ffc457;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
     .mobileMenu {
         display: contents;
     }
@@ -56,9 +60,124 @@ body {
     width: 30%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
     .image404 {
         width: 80%;
     }
 
+}
+
+.containerOutside {
+    padding: 9% 5%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 960px) {
+    .containerOutside {
+      justify-content: center;
+      padding: 10% 3%;
+    }
+}
+
+.containerBox {
+    text-align: center;
+    /* background-color: #f1d1952e; */
+    align-items: center;
+    margin-top: 10%;
+}
+
+.helloText {
+    color: #f9d79b;
+    writing-mode: tb-rl;
+    text-orientation: upright;
+    font-size: 4em;
+    font-family: sans-serif;
+    font-weight: bold;
+    /* letter-spacing: 20px; */
+    /* display: inline-block; */
+    vertical-align: middle;
+}
+
+.descriptionText {
+    display: inline-block;
+    padding-left: 3%;
+    width: 70%;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.imText {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman;
+    letter-spacing: 5px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+
+.nameText {
+    color: #ffc500;
+    font-size: 55px;
+    font-family: monospace;
+    text-shadow: 1px 1px 3px #000000, 1px 1px 1px #ffffff;
+}
+
+.imaText {
+    color: #e8dede;
+    font-size: 20px;
+    width: 70%;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 3px #2446ff;
+}
+
+
+.responsive {
+    width: 100%;
+}
+
+.containerImageDio {
+    padding: 0% 5%;
+}
+
+.imageDio {
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.75), 0px -1px 16px 6px rgba(255, 255, 255, 0.75);
+    border-radius: 1000px;
+}
+
+.imageDio:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 960px) {
+    .containerBox {
+        justify-content: center;
+    }
+
+    .helloText {
+        writing-mode: unset;
+        vertical-align: middle;
+        letter-spacing: unset;
+    }
+
+    .descriptionText {
+        display: inline-block;
+        padding-left: 0px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .imText {
+        font-size: 2em;
+    }
+
+    .imaText {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    .containerImageDio {
+        padding: 0% 20%;
+    }
 }

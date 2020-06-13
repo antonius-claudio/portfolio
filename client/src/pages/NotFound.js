@@ -5,7 +5,7 @@ export default function NotFound () {
     return (
         <>
             <Grid item xs={12} style={{textAlign: 'center'}}>
-                <img src='/404.gif' className='image404'/>
+                <img src='/404.gif' className='image404' alt='not found 404'/>
             </Grid>
         </>
     )

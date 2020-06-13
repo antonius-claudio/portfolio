@@ -6,10 +6,9 @@ import Projects from './pages/Projects';
 import Experiences from './pages/Experiences';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import NavigationBar from './components/NavigationBar';
+// import NavigationBar from './components/NavigationBar';
 import './assets/css/style.css';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 const routes = [
   {
     exact: true,
@@ -46,12 +45,10 @@ const AppRouter = () => (
 function App() {
   return (
     <Router>
-      <Container maxWidth='xl'>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <Grid container spacing={1} style={{margin: 'auto'}}>
           <AppRouter />
         </Grid>
-      </Container>
     </Router>
   );
 }
