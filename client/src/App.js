@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 import Experiences from './pages/Experiences';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-// import NavigationBar from './components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 import './assets/css/style.css';
 import Grid from '@material-ui/core/Grid';
 const routes = [
@@ -45,7 +45,7 @@ const AppRouter = () => (
 function App() {
   return (
     <Router>
-        {/* <NavigationBar /> */}
+        <NavigationBar />
         <Grid container spacing={1} style={{margin: 'auto'}}>
           <AppRouter />
         </Grid>

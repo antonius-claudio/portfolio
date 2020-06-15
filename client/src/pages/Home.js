@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 export default function Home () {
 
@@ -23,6 +24,13 @@ export default function Home () {
                         </div>
                         <div className='imaText'>
                             a software engineer, who can help you to create a website or application in accordance with your imagination.
+                        </div>
+                        <div className='buttonWhoAmI'>
+                            <Link to='/experience'>
+                                <button>
+                                    Where I've been
+                                </button>
+                            </Link>
                         </div>
                     </Grid>
                 </Grid>

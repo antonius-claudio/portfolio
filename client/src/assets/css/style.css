@@ -31,12 +31,6 @@ body {
     color: #ffc457;
 }
 
-@media only screen and (max-width: 960px) {
-    .desktopMenu {
-      display: none;
-    }
-}
-
 .mobileMenu {
     display: none;
 }
@@ -49,35 +43,14 @@ body {
     color: #ffc457;
 }
 
-@media only screen and (max-width: 960px) {
-    .mobileMenu {
-        display: contents;
-    }
-
-}
-
 .image404 {
     width: 30%;
 }
 
-@media only screen and (max-width: 960px) {
-    .image404 {
-        width: 80%;
-    }
-
-}
-
 .containerOutside {
-    padding: 9% 5%;
+    padding: 7% 5%;
     align-items: flex-end;
     justify-content: center;
-}
-
-@media only screen and (max-width: 960px) {
-    .containerOutside {
-      justify-content: center;
-      padding: 10% 3%;
-    }
 }
 
 .containerBox {
@@ -132,7 +105,6 @@ body {
     text-shadow: 1px 1px 3px #2446ff;
 }
 
-
 .responsive {
     width: 100%;
 }
@@ -142,6 +114,8 @@ body {
 }
 
 .imageDio {
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.75), 0px -1px 16px 6px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.75), 0px -1px 16px 6px rgba(255, 255, 255, 0.75);
     box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.75), 0px -1px 16px 6px rgba(255, 255, 255, 0.75);
     border-radius: 1000px;
 }
@@ -150,7 +124,101 @@ body {
     transform: scale(1.1);
 }
 
+.buttonWhoAmI {
+    margin-top: 3%;
+}
+
+.buttonWhoAmI a button {
+    background-color: #fde286;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    color: #90081a;
+    font-weight: bold;
+}
+
+.buttonWhoAmI a button:hover {
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 244, 244, 0.75);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(255, 244, 244, 0.75);
+    box-shadow: 0px 0px 2px 2px rgba(255, 244, 244, 0.75);
+}
+
+.textExperience {
+    color: #ffffff;
+    font-size: 2em;
+    /* width: max-content; */
+    /* vertical-align: top; */
+    /* display: inline-block; */
+    padding-bottom: 10px;
+    border-bottom: 5px dashed #cc8d19;
+}
+
+.textExperience h3 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.containExperience {
+    margin-left: 1%;
+}
+
+.boxCardExperience {
+    border-radius: 35px;
+    padding: 10px 20px;
+    background-color: #8a775f57;
+    margin-bottom: 2% !important;
+    color: #ffdc9a;
+    -webkit-box-shadow: inset 0px 0px 3px 2px rgba(218, 218, 218, 0.4);
+    -moz-box-shadow: inset 0px 0px 3px 2px rgba(218, 218, 218, 0.4);
+    box-shadow: inset 0px 0px 3px 2px rgba(218, 218, 218, 0.4);
+}
+
+.boxCardExperience h4 {
+    font-size: 1.3em;
+}
+
+.boxCardExperience span {
+    color: #ffd500;
+}
+
+.boxCardExperience li {
+    color: #e6b05d;
+}
+
+.expOnly {
+    align-items: flex-start;
+}
+
+.lineDivider {
+    background-color: #ffa217 !important;
+    margin-bottom: 1.3em !important;
+}
+
+@media only screen and (max-width: 1280px) {
+    .textExperience h3 {
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width: 960px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: contents;
+    }
+
+    .image404 {
+        width: 80%;
+    }
+
+    .containerOutside {
+        justify-content: center;
+        padding: 10% 3%;
+    }
+
     .containerBox {
         justify-content: center;
     }
@@ -169,7 +237,7 @@ body {
     }
 
     .imText {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .imaText {
@@ -179,5 +247,15 @@ body {
 
     .containerImageDio {
         padding: 0% 20%;
+    }
+
+    .containExperience {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    .boxCardExperience {
+        margin-bottom: 5% !important;
     }
 }

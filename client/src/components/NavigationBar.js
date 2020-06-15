@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import HomeIcon from '@material-ui/icons/Home';
-import FaceIcon from '@material-ui/icons/Face';
+// import FaceIcon from '@material-ui/icons/Face';
 import WorkIcon from '@material-ui/icons/Work';
 import FolderIcon from '@material-ui/icons/Folder';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
@@ -34,13 +34,13 @@ export default function NavigationBar () {
                             <Button color="inherit" >Home</Button>
                         }
                         </Link>
-                        <Link to='/profile'>
+                        {/* <Link to='/profile'>
                         {url === '/profile' ? 
                             <Button color="inherit" className='activePage'>Profile</Button>
                         :
                             <Button color="inherit" >Profile</Button>
                         }
-                        </Link>
+                        </Link> */}
                         <Link to='/experience'>
                         {url === '/experience' ? 
                             <Button color="inherit" className='activePage'>Experience</Button>
@@ -73,7 +73,7 @@ export default function NavigationBar () {
                         }
                         </IconButton>
                     </Link>
-                    <Link to='/profile'>
+                    {/* <Link to='/profile'>
                         <IconButton>
                         {url === '/profile' ? 
                             <FaceIcon className='activePageMobile'/>
@@ -81,7 +81,7 @@ export default function NavigationBar () {
                             <FaceIcon />
                         }
                         </IconButton>
-                    </Link>
+                    </Link> */}
                     <Link to='/experience'>
                         <IconButton>
                         {url === '/experience' ? 
