@@ -194,6 +194,22 @@ body {
     margin-bottom: 1.3em !important;
 }
 
+.boxTabs {
+    margin-bottom: 2%;
+    color: #adc6ff;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.textTabs {
+    padding: 2% 0%;
+}
+
+.activeTabsMenu {
+    border-top: #fff 2px solid;
+    background-color: #ffffff1f;
+}
+
 @media only screen and (max-width: 1280px) {
     .textExperience h3 {
         font-size: 0.8em;
@@ -257,5 +273,10 @@ body {
 
     .boxCardExperience {
         margin-bottom: 5% !important;
+    }
+
+    .boxTabs {
+        font-size: 1em;
+        justify-content: space-evenly;
     }
 }

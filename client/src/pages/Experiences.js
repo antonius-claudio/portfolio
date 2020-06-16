@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import CardExperience from '../components/CardExperience';
+import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
+
 export default function Experiences () {
     let [experiences, setExperiences] = useState([]);
+    let [activeTab, setActiveTab] = useState(0);
 
     useEffect(() => {
         setExperiences([
@@ -38,11 +41,48 @@ export default function Experiences () {
                     </div>
                 </Grid>
                 <Grid container lg={6} md={6} sm={12} className='containExperience'>
+                    <Grid container lg={12} md={12} sm={12} className='boxTabs'>
+                        {
+                            experiences[0] && 
+                            experiences.map((experience, index) => (
+                                <Grid item lg={6} md={6} sm={6} key={index}>
+                                    {
+                                        activeTab === index ?
+                                        <div onClick={() => {setActiveTab(index)}} className='textTabs activeTabsMenu'>
+                                            {experience.company}
+                                        </div>
+                                        :
+                                        <div onClick={() => {setActiveTab(index)}} className='textTabs'>
+                                            {experience.company}
+                                        </div>
+                                    }
+                                </Grid>
+                            ))
+                        }
+                    </Grid>
+                    <Grid container lg={12} md={12} sm={12}>
+                        {
+                            experiences[0] &&
+                            <CardExperience experience={experiences[activeTab]} />
+                        }
+                    </Grid>
+                {/* <Tabs defaultTab="vertical-tab-one" vertical>
+                    <TabList>
+                        { experiences[0] && 
+                            experiences.map((experience, index) => (
+                                <Tab key={index} tabFor={`tab-${index}`}>{experience.company}</Tab>
+                            ))
+                        }
+                    </TabList>
                     {
+                        experiences[0] && 
                         experiences.map((experience, index) => (
-                            <CardExperience key={index} experience={experience} />
+                            <TabPanel tabId={`tab-${index}`}>
+                                <CardExperience key={index} experience={experience} />
+                            </TabPanel>
                         ))
                     }
+                </Tabs> */}
                 </Grid>
             </Grid>
         </>
