@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import CardExperience from '../components/CardExperience';
-import { Tabs, Tab, TabPanel, TabList } from 'react-web-tabs';
 
 export default function Experiences () {
     let [experiences, setExperiences] = useState([]);
@@ -66,23 +65,6 @@ export default function Experiences () {
                             <CardExperience experience={experiences[activeTab]} />
                         }
                     </Grid>
-                {/* <Tabs defaultTab="vertical-tab-one" vertical>
-                    <TabList>
-                        { experiences[0] && 
-                            experiences.map((experience, index) => (
-                                <Tab key={index} tabFor={`tab-${index}`}>{experience.company}</Tab>
-                            ))
-                        }
-                    </TabList>
-                    {
-                        experiences[0] && 
-                        experiences.map((experience, index) => (
-                            <TabPanel tabId={`tab-${index}`}>
-                                <CardExperience key={index} experience={experience} />
-                            </TabPanel>
-                        ))
-                    }
-                </Tabs> */}
                 </Grid>
             </Grid>
         </>
