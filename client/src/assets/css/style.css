@@ -146,9 +146,6 @@ body {
 .textExperience {
     color: #ffffff;
     font-size: 2em;
-    /* width: max-content; */
-    /* vertical-align: top; */
-    /* display: inline-block; */
     padding-bottom: 10px;
     border-bottom: 5px dashed #cc8d19;
 }
@@ -196,22 +193,24 @@ body {
 
 .boxTabs {
     margin-bottom: 2%;
-    color: #adc6ff;
+    color: #d6e3ff;
     font-size: 1.3em;
     text-align: center;
+    cursor: pointer;
 }
 
 .textTabs {
     padding: 2% 0%;
+    border-top: #fff 2px solid;
 }
 
 .activeTabsMenu {
-    border-top: #fff 2px solid;
     background-color: #ffffff1f;
 }
 
 .boxCardProject {
     padding: 3%;
+    cursor: pointer;
 }
 
 .boxCardProject .BrandCardHeader-root-1 {
@@ -254,10 +253,55 @@ body {
     color: #fff;
 }
 
+.boxContact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 20pt;
+    color: #ffde9f;
+}
+
+.textContact h1 {
+    color: #fff;
+    border-bottom: 5px dashed #cc8d19;
+    padding-bottom: 10%;
+}
+
+.textDescriptionContact {
+    width: 35%;
+}
+
+.boxSocialIcon {
+    margin-top: 3%;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.socialIcon {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.socialIcon img {
+    border-radius: 100%;
+    width: 100%;
+}
+
+.socialIcon img:hover {
+    -webkit-box-shadow: 0px 0px 5px 3px rgb(245, 170, 115);
+    -moz-box-shadow: 0px 0px 5px 3px rgb(245, 170, 115);
+    box-shadow: 0px 0px 5px 3px rgb(245, 170, 115);
+}
+
 @media only screen and (max-width: 1280px) {
     .textExperience h3 {
         font-size: 0.8em;
         text-align: center;
+    }
+
+    .textDescriptionContact {
+        width: 60%;
     }
 }
 
@@ -326,5 +370,14 @@ body {
 
     .boxCardProject {
         min-width: 100%;
+    }
+
+    .textDescriptionContact {
+        width: 90%;
+    }
+
+    .boxSocialIcon {
+        width: 80%;
+        margin-top: 5%;
     }
 }
