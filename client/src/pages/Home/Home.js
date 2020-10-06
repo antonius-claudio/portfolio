@@ -1,8 +1,14 @@
 import React from 'react';
 import Style from './Home.module.scss';
 
-const Home = () => {
+const Home = (props) => {
   const photo = '/diocartoon.png';
+  
+  React.useEffect(() => {
+    const { checkPage, location } = props;
+    const { pathname } = location;
+    checkPage(pathname);
+  }, []);
 
   const photoProfile =
     <div className={Style.photo}>

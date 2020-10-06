@@ -1,0 +1,26 @@
+.wrapper {
+  height: 100%;
+  width: 1px;
+  position: fixed;
+  right: 10%;
+  top: 0;
+
+  @media (min-width: 768px) {
+    right: 60px;
+    width: 2px;
+  }
+
+  .line {
+    width: 100%;
+    background-color: #00207075;
+  }
+
+  .cartoon {
+    width: 100px;
+    transform: translate(-49px, -6px);
+
+    img {
+      width: 100%;
+    }
+  }
+}
