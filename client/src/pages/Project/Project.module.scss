@@ -4,13 +4,14 @@
   .wrapper {
     height: 100vh;
     max-height: 100%;
-    background-image: url('/bg-2.png');
+    background-image: url('/bg-3.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: center;
 
     @media (min-width:768px) {
       background-position: unset;
+      background-size: contain;
     }
   }
 }

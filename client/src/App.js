@@ -25,6 +25,7 @@ const AppRouter = (props) => (
 
 function App() {
   const [percent, setPercent] = React.useState(0);
+  const [page, setPage] = React.useState(false);
 
   const checkPage = (path) => { //add page point here
     if (path === '/') delaySetPercent(10);
@@ -47,14 +48,14 @@ function App() {
       <BrowserRouter>
         <React.Suspense fallback={loading()}>
           <AppRouter checkPage={checkPage}/>
-          <Scroll />
+          {/* <Scroll page={page} setPage={setPage}/> */}
         </React.Suspense>
         <React.Suspense fallback={loading()}>
           <SocialMedia />
         </React.Suspense>
-        <React.Suspense fallback={loading()}>
+        {/* <React.Suspense fallback={loading()}>
           <PageLine percent={percent}/>
-        </React.Suspense>
+        </React.Suspense> */}
       </BrowserRouter>
     </>
   );

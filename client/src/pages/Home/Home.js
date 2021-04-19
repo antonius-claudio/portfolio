@@ -28,8 +28,8 @@ const Home = (props) => {
     <div className={Style.home}>
       <div className={Style.wrapper}>
         <div className={Style.content}>
-          {photoProfile}
-          {textProfile}
+          {/* {photoProfile} */}
+          {/* {textProfile} */}
         </div>
       </div>
     </div>
