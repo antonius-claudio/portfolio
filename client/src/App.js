@@ -50,9 +50,9 @@ function App() {
           <AppRouter checkPage={checkPage}/>
           {/* <Scroll page={page} setPage={setPage}/> */}
         </React.Suspense>
-        <React.Suspense fallback={loading()}>
+        {/* <React.Suspense fallback={loading()}>
           <SocialMedia />
-        </React.Suspense>
+        </React.Suspense> */}
         {/* <React.Suspense fallback={loading()}>
           <PageLine percent={percent}/>
         </React.Suspense> */}
