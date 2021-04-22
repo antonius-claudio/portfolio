@@ -24,8 +24,9 @@ const Home = (props) => {
       <p>a Full Stack Developer, who can help you to create a website or application in accordance with your imagination.</p>
     </div>
   ;
-
-  const [result, setResult] = React.useState(["write your command here...", 'like "hello", "experience", "project"', "then press 'Enter'"]);
+  
+  const defResult = ["write your command here...", 'like "hello", "experience", "project", "clear"', "then press 'Enter'"];
+  const [result, setResult] = React.useState(defResult);
   const [inputText, setInputText] = React.useState("");
   const [showFocus, setShowFocus] = React.useState(true);
 
@@ -34,9 +35,20 @@ const Home = (props) => {
     setInputText(afterRegex)
   };
 
+  const checkCommand = (command) => {
+    if (command === "hello" || command === "experience" || command === "project" || command === "clear") {
+      if (command === "clear") setResult(defResult);
+      else {
+        setResult([ ...result, inputText ]);
+      }
+    } else {
+      setResult([ ...result, "wrong command!" ]);
+    }
+  };
+
   const detectEnter = (e) => {
     if (e.key === "Enter") {
-      setResult([ ...result, inputText ]);
+      checkCommand(inputText);
       $("#input-console").val("");
     }
   };

@@ -55,12 +55,30 @@
     overflow-y: scroll;
     color: #ffffff;
 
+    pre {
+      position: relative;
+
+      &:before {
+        content: ">";
+        position: absolute;
+        left: -10px;
+      }
+    }
+
     .inputView {
       width: 100%;
       word-break: break-word;
       display: block;
       font-family: monospace;
       white-space: pre;
+
+      position: relative;
+
+      &:before {
+        content: ">";
+        position: absolute;
+        left: -10px;
+      }
 
       textarea {
         color: #ffffff;
