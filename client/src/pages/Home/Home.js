@@ -25,28 +25,28 @@ const Home = (props) => {
     </div>
   ;
 
-  const [result, setResult] = React.useState(["isi code loh", "isi code2 loh"]);
+  const [result, setResult] = React.useState(["write your command here...", 'like "hello", "experience", "project"', "then press 'Enter'"]);
   const [inputText, setInputText] = React.useState("");
+  const [showFocus, setShowFocus] = React.useState(true);
 
   const onChangeInput = (e) => {
-    // console.log(e.target.value)
-    setInputText(e.target.value)
+    const afterRegex = e.target.value.replace(/(\r\n|\n|\r)/gm, "").trim();
+    setInputText(afterRegex)
   };
 
   const detectEnter = (e) => {
     if (e.key === "Enter") {
       setResult([ ...result, inputText ]);
-      $("#input-console").removeData();
-      setInputText("");
-      console.log('after set "')
-      setTimeout(() => {
-        console.log('inputText', inputText)
-      }, 5000)
+      $("#input-console").val("");
     }
   };
 
+  const onClickDetail = () => {
+    setShowFocus(false);
+  };
+
   const onClickConsole = () => {
-    console.log('onclick console')
+    setShowFocus(true);
     $("#input-console").focus();
   };
 
@@ -54,25 +54,29 @@ const Home = (props) => {
     <div className={Style.home}>
       <div className={Style.wrapper}>
         <div className={Style.content}>
-          <div className={Style.console} onClick={onClickConsole}>
-            {
-              result.map(paragraf => <pre>{paragraf}</pre>)
-            }
-            <div className={Style.inputView}>
-              {inputText}
-              <span>
-                <textarea 
-                  id="input-console" 
-                  onChange={onChangeInput}
-                  maxLength="20" 
-                  onKeyPress={detectEnter}
-                />
-              </span>
-            </div>
-            
+          <div className={Style.wrapperDetail} onClick={onClickDetail}>
           </div>
-          {/* {photoProfile} */}
-          {/* {textProfile} */}
+          <div className={Style.wrapperConsole}>
+            <div className={Style.console} onClick={onClickConsole}>
+              {
+                result.map(paragraf => <pre>{paragraf}</pre>)
+              }
+              <div className={Style.inputView}>
+                {inputText}
+                <span>
+                  <textarea 
+                    id="input-console" 
+                    onChange={onChangeInput}
+                    maxLength="20" 
+                    onKeyPress={detectEnter}
+                    autoFocus
+                  />
+                  {showFocus && <span className={Style.cursorText}>|</span>}
+                </span>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
