@@ -2,8 +2,8 @@ import React from 'react';
 import Style from './Home.module.scss';
 import $ from 'jquery';
 import { Hello } from '../../components/Hello/Hello';
-import { Experience } from '../../components/Experience/Experience';
-import { Project } from '../../components/Project/Project';
+import { Education } from '../../components/Education/Education';
+import { Portfolio } from '../../components/Portfolio/Portfolio';
 import { Opening } from '../../components/Opening/Opening';
 import { Contact } from '../../components/Contact/Contact';
 
@@ -30,7 +30,7 @@ const Home = (props) => {
     </div>
   ;
   
-  const defResult = ["write your command here...", 'like "hello", "experience",', '"project", "contact", "clear"', "then press 'Enter'"];
+  const defResult = ["write your command here...", 'like "hello", "education",', '"portfolio", "contact", "clear"', "then press 'Enter'"];
   const [result, setResult] = React.useState(defResult);
   const [inputText, setInputText] = React.useState("");
   const [showFocus, setShowFocus] = React.useState(true);
@@ -42,7 +42,7 @@ const Home = (props) => {
   };
 
   const checkCommand = (command) => {
-    if (command === "hello" || command === "experience" || command === "project" || command === "contact" || command === "clear") {
+    if (command === "hello" || command === "education" || command === "portfolio" || command === "contact" || command === "clear") {
       if (command === "clear") setResult(defResult);
       else setResult([ ...result, inputText ]);
       setCmd(inputText);
@@ -77,10 +77,11 @@ const Home = (props) => {
     };
 
     if (cmd === "hello") return <Hello />;
-    if (cmd === "experience") return <Experience />;
-    if (cmd === "project") return <Project />;
+    if (cmd === "education") return <Education />;
+    if (cmd === "portfolio") return <Portfolio />;
     if (cmd === "contact") return <Contact />;
-    return <Opening />
+    // return <Opening />;
+    return <Education />;
   };
 
   return (
