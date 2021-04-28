@@ -1,6 +1,11 @@
 import React from 'react';
 import Style from './Home.module.scss';
 import $ from 'jquery';
+import { Hello } from '../../components/Hello/Hello';
+import { Experience } from '../../components/Experience/Experience';
+import { Project } from '../../components/Project/Project';
+import { Opening } from '../../components/Opening/Opening';
+import { Contact } from '../../components/Contact/Contact';
 
 const Home = (props) => {
   const photo = '/diocartoon.png';
@@ -25,10 +30,11 @@ const Home = (props) => {
     </div>
   ;
   
-  const defResult = ["write your command here...", 'like "hello", "experience", "project", "clear"', "then press 'Enter'"];
+  const defResult = ["write your command here...", 'like "hello", "experience",', '"project", "contact", "clear"', "then press 'Enter'"];
   const [result, setResult] = React.useState(defResult);
   const [inputText, setInputText] = React.useState("");
   const [showFocus, setShowFocus] = React.useState(true);
+  const [cmd, setCmd] = React.useState("");
 
   const onChangeInput = (e) => {
     const afterRegex = e.target.value.replace(/(\r\n|\n|\r)/gm, "").trim();
@@ -36,11 +42,10 @@ const Home = (props) => {
   };
 
   const checkCommand = (command) => {
-    if (command === "hello" || command === "experience" || command === "project" || command === "clear") {
+    if (command === "hello" || command === "experience" || command === "project" || command === "contact" || command === "clear") {
       if (command === "clear") setResult(defResult);
-      else {
-        setResult([ ...result, inputText ]);
-      }
+      else setResult([ ...result, inputText ]);
+      setCmd(inputText);
     } else {
       setResult([ ...result, "wrong command!" ]);
     }
@@ -59,7 +64,23 @@ const Home = (props) => {
 
   const onClickConsole = () => {
     setShowFocus(true);
-    $("#input-console").focus();
+  };
+
+  React.useEffect(() => {
+    if (showFocus)
+      $("#input-console").focus();
+  }, [showFocus])
+
+  const content = () => {
+    const payload = {
+      
+    };
+
+    if (cmd === "hello") return <Hello />;
+    if (cmd === "experience") return <Experience />;
+    if (cmd === "project") return <Project />;
+    if (cmd === "contact") return <Contact />;
+    return <Opening />
   };
 
   return (
@@ -67,6 +88,7 @@ const Home = (props) => {
       <div className={Style.wrapper}>
         <div className={Style.content}>
           <div className={Style.wrapperDetail} onClick={onClickDetail}>
+            {content()}
           </div>
           <div className={Style.wrapperConsole}>
             <div className={Style.console} onClick={onClickConsole}>

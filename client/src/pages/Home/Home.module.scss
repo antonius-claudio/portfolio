@@ -24,17 +24,21 @@
   }
 
   .wrapperDetail {
-    height: calc(100vh - 310px);
+    height: calc(100vh - 165px);
     background-color: #2e3947;
     position: relative;
+    font-family: monospace;
+    white-space: pre;
+    color: #ffffff;
     // background-image: url('/backgroundv2.svg');
     // background-size: cover;
     // background-repeat: no-repeat;
     // background-position: center;
 
-    // @media (min-width:768px) {
-    //   background-position: unset;
-    // }
+    @media (min-width:768px) {
+      // background-position: unset;
+      height: calc(100vh - 210px);
+    }
   }
 
   .wrapperConsole {
@@ -47,7 +51,7 @@
 
   .wrapperConsole .console {
     width: 100%;
-    height: 300px;
+    height: 155px;
     background-color: #272727;
     border-radius: 0px;
     padding: 0 30px;
@@ -55,13 +59,18 @@
     overflow-y: scroll;
     color: #ffffff;
 
+    @media (min-width:768px) {
+      height: 200px;
+    }
+
     pre {
       position: relative;
+      font-size: 15px;
 
       &:before {
         content: ">";
         position: absolute;
-        left: -10px;
+        left: -15px;
       }
     }
 
@@ -71,13 +80,13 @@
       display: block;
       font-family: monospace;
       white-space: pre;
-
+      font-size: 15px;
       position: relative;
 
       &:before {
         content: ">";
         position: absolute;
-        left: -10px;
+        left: -15px;
       }
 
       textarea {
