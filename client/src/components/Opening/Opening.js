@@ -14,6 +14,7 @@ export const Opening = (props) => {
   return <section className={Style.opening}>
     <div className={Style.wrapperOpening}>
       <div className={Style.hi}>
+        <img src="/logo-white-64.png" className={Style.logo} />
         <Typing text="Hi there," mount={mount} delay={500} />
       </div>
       <div className={Style.welcome}>

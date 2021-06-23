@@ -80,8 +80,8 @@ const Home = (props) => {
     if (cmd === "education") return <Education />;
     if (cmd === "portfolio") return <Portfolio />;
     if (cmd === "contact") return <Contact />;
-    // return <Opening />;
-    return <Education />;
+    return <Opening />;
+    // return <Education />;
   };
 
   return (

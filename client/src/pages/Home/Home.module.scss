@@ -25,9 +25,11 @@
 
   .wrapperDetail {
     height: calc(100vh - 165px);
-    background-color: #2e3947;
+    // background-color: #2e3947;
+    background: linear-gradient(72.31deg, #a4a7f6cc 27.98%, #98c1e6 52.81%, #adeef2 78.26%, #c2eff3 86.01%, #ffffff 100%);
     position: relative;
     font-family: monospace;
+    text-shadow: 1px 1px 4px #272727cc;
     white-space: pre;
     color: #ffffff;
     // background-image: url('/backgroundv2.svg');
