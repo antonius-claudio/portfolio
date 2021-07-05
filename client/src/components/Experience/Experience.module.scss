@@ -14,6 +14,25 @@
   position: relative;
 }
 
+.wrapper .bgWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  animation: bgWater 1s linear 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100%;
+
+    @media (min-width: 732px) {
+      width: 100%;
+    }
+  }
+}
+
 .content {
   position: absolute;
   top: 0;
@@ -45,14 +64,16 @@
   transform: translate(0px, 0px);
   opacity: 1;
   transition: all 1s linear;
-  background: #ffffff61;
-  padding: 3px;
+  background: #021c4c73;
+  padding: 3px 0px 3px 3px;
   border-radius: 3px;
   z-index: 1;
   max-width: 251.94px;
   max-height: 178px;
   position: relative;
   // animation: rotation 1s linear 1;
+  border-radius: 15px;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     transition: all 0.5s linear;
@@ -88,16 +109,18 @@
 }
 
 .card {
-  background: #926fff73;
+  // background: #926fff73;
   padding: 10px 15px;
-  border-radius: 3px;
-  margin-bottom: 5px;
+  // border-radius: 15px;
+  // margin-bottom: 5px;
   cursor: pointer;
   z-index: 1;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 
-  &:last-child {
-    margin-bottom: unset;
-  }
+  // &:last-child {
+  //   margin-bottom: unset;
+  // }
 
   // &:nth-child(odd) {
   //   background: #926fff73;
@@ -106,13 +129,45 @@
 
 
   &:hover {
-    background: #6844d8ab;
+    background: #ffffff;
+    color: #000;
+    position: relative;
 
     .leftHeadline {
       animation: shake 2s linear 1;
       background: url('/bubbles.svg') #ffffff;
       background-repeat: no-repeat;
       background-size: contain;
+    }
+
+    .headline {
+      &:before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        background-color: #021c4c00;
+        border-radius: 15px;
+        box-shadow: 15px 15px 0 #ffffff;
+        pointer-events: none;
+      }
+    }
+
+    .headline {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        background-color: #021c4c00;
+        border-radius: 15px;
+        box-shadow: 15px -15px 0 #ffffff;
+        pointer-events: none;
+      }
     }
   }
 }
@@ -221,10 +276,15 @@
 
 .detail {
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #ffd5d5;
   border-radius: 4px;
   font-family: monospace;
+  width: 90vw;
   // text-shadow: 1px 1px 4px #272727cc;
+
+  @media (min-width: 768px) {
+    width: unset;
+  }
 
   .contentDetail {
 
@@ -237,12 +297,20 @@
     }
 
     .jobDesks {
+      padding: 10px 10px;
+      color: #171d28;
+      overflow: auto;
+      max-height: calc(100vh - 165px);
+
       ul {
         padding-left: 15px;
       }
 
       ul li {
         font-size: 16px;
+        padding: 3px 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
       }
     }
   }
@@ -302,5 +370,16 @@
   50% {
     -webkit-transform: rotate3d(0, 1, 0, 90deg);
             transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+
+@keyframes bgWater {
+  0% {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }

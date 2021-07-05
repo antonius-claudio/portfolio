@@ -26,7 +26,7 @@ export const Experience = (props) => {
         'Designed a new look for the website using Photoshop',
         'Created a new page as requested using WordPress',
         'Inputted the latest news and events',
-        'Created google analytics report every month'
+        'Created google analytics report every month',
       ]
     },
     {
@@ -49,14 +49,14 @@ export const Experience = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setMount(true);
-    }, 500);
+    }, 1500);
   }, []);
 
   useEffect(() => {
     if (mount === true)
       setTimeout(() => {
         setIsTitleShow(true);
-      }, 750);
+      }, 1000);
   }, [mount]);
 
   // useEffect(() => {
@@ -129,6 +129,9 @@ export const Experience = (props) => {
   return (
     <section className={Style.experience}>
       <div className={Style.wrapper}>
+        <div className={Style.bgWrapper}>
+          <img src="/underwater.jpg" />
+        </div>
 
         <div className={Style.header}>
           <Typing text="X-perience" mount={mount} />

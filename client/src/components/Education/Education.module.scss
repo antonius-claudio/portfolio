@@ -85,6 +85,7 @@
   .txtBtn {
     font-size: 16px;
     color: #141893;
+    white-space: break-spaces;
 
     @media (min-width: 768px) {
       font-size: 20px;
