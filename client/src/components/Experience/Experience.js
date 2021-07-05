@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Typing from '../Typing/Typing';
 import Style from './Experience.module.scss';
+import Modal from '../Modal/Modal';
 
 export const Experience = (props) => {
   const [experience, setExperience] = React.useState([
@@ -41,6 +42,7 @@ export const Experience = (props) => {
   ]);
   const [active, setActive] = useState(false);
   const [isShow, setIsShow] = useState(false);
+  // const [animasi, setAnimasi] = useState(false);
   const [mount, setMount] = useState(false);
   const [isTitleShow, setIsTitleShow] = useState(false);
 
@@ -57,25 +59,39 @@ export const Experience = (props) => {
       }, 750);
   }, [mount]);
 
+  // useEffect(() => {
+  //   if (animasi === true)
+  //     setTimeout(() => {
+  //       setAnimasi(false);
+  //     }, 1000);
+  // }, [animasi]);
+
   const open = (key) => {
     setActive(key);
+    // setAnimasi(true);
     setIsShow(true);
   };
 
   const close = () => {
     setActive(false);
+    // setAnimasi(true);
     setIsShow(false);
   };
 
   const card = (item, index) => (
-    <div className={Style.card} onClick={() => { open(index) }}>
+    <div className={Style.card} key={index} onClick={() => { open(item.id) }}>
     {/* <div className={Style.card} > */}
       <div className={Style.headline}>
-        <div className={Style.company}>
-          {item.company}
+        <div className={Style.leftHeadline}>
+          <img src="/fish.png" />
         </div>
-        <div className={Style.title}>
-          {item.title}
+        <div className={Style.rightHeadline}>
+          <div className={Style.company}>
+            {item.company}
+          </div>
+          <div className={Style.title}>
+            {item.title}
+          </div>
         </div>
       </div>
     </div>
@@ -86,7 +102,8 @@ export const Experience = (props) => {
   ;
 
   const detail = () => {
-    const selected = experience[active];
+    const selected = experience.find(exp => exp.id === active);
+    if (!selected) return '';
     return (
       <div className={Style.detail}>
         <div className={Style.contentDetail}>
@@ -99,14 +116,15 @@ export const Experience = (props) => {
             </ul>
           </div>
         </div>
-        <div className={Style.button} onClick={close}>
-          back
-        </div>
       </div>
     );
   };
 
   const styleBox = isTitleShow ? '' : Style.outBox;
+
+  const styleShowDetail = isShow ? Style.show : '';
+
+  // const styleAnimasi = animasi ? Style.animasi : '';
 
   return (
     <section className={Style.experience}>
@@ -116,10 +134,22 @@ export const Experience = (props) => {
           <Typing text="X-perience" mount={mount} />
         </div>
         
-        <div className={`${Style.boxExp} ${styleBox}`}>
+        <div className={`${Style.boxExp} ${styleBox} ${styleShowDetail}`}>
           { view }
         </div>
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
+        <div className={Style.particles} />
       </div>
+
+    <Modal isOpen={isShow} setIsOpen={setIsShow}>
+      { detail() }
+    </Modal>
     </section>
   )
 };

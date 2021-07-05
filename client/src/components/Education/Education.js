@@ -11,7 +11,7 @@ export const Education = (props) => {
       academy: 'Hacktiv8 Indonesia',
       title: 'Full Stack Javascript Dev',
       period: 'Jan 2020 – Jun 2020',
-      desc: 'in this bootcamp I learned how to create a full stack application, using nodejs, postgresql, mongoDB, reactjs, react native'
+      desc: 'in this bootcamp I learned how to create a full stack application, using nodejs, postgresql, mongoDB, reactjs, vue, react native'
     },
     {
       id: 1,
