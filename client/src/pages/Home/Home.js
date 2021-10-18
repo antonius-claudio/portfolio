@@ -82,8 +82,8 @@ const Home = (props) => {
     if (cmd === "experience") return <Experience />;
     if (cmd === "portfolio") return <Portfolio />;
     if (cmd === "contact") return <Contact />;
-    // return <Opening />;
-    return <Portfolio />;
+    return <Opening />;
+    // return <Portfolio />;
   };
 
   return (
