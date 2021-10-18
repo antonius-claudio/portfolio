@@ -60,20 +60,22 @@ const Home = (props) => {
   };
 
   const onClickDetail = () => {
-    setShowFocus(false);
+    if (showFocus === true)
+      setShowFocus(false);
   };
 
   const onClickConsole = () => {
-    setShowFocus(true);
+    if (showFocus === false)
+      setShowFocus(true);
   };
 
   React.useEffect(() => {
-    if (document.getElementById('input-console'));
+    if (document.getElementById('input-console') && document.getElementById('input-console').blur());
       document.getElementById('input-console').focus();
   }, []);
 
   React.useEffect(() => {
-    if (showFocus)
+    if (showFocus && document.getElementById('input-console').blur())
       document.getElementById('input-console').focus();
   }, [showFocus]);
 
