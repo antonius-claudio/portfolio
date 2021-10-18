@@ -70,12 +70,12 @@ const Home = (props) => {
   };
 
   React.useEffect(() => {
-    if (document.getElementById('input-console') && document.getElementById('input-console').blur());
+    if (showFocus === false && document.getElementById('input-console'));
       document.getElementById('input-console').focus();
   }, []);
 
   React.useEffect(() => {
-    if (showFocus && document.getElementById('input-console').blur())
+    if (showFocus === false)
       document.getElementById('input-console').focus();
   }, [showFocus]);
 
