@@ -68,9 +68,14 @@ const Home = (props) => {
   };
 
   React.useEffect(() => {
+    if (document.getElementById('input-console'));
+      document.getElementById('input-console').focus();
+  }, []);
+
+  React.useEffect(() => {
     if (showFocus)
-      $("#input-console").focus();
-  }, [showFocus])
+      document.getElementById('input-console').focus();
+  }, [showFocus]);
 
   const content = () => {
     const payload = {
