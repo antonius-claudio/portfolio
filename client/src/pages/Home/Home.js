@@ -99,6 +99,20 @@ const Home = (props) => {
         <div className={Style.content}>
           <div className={Style.wrapperDetail} onClick={onClickDetail}>
             {content()}
+            <div className={Style.submenu}>
+              <button className={Style.menu}>
+                hello
+              </button>
+              <button className={Style.menu}>
+                education
+              </button>
+              <button className={Style.menu}>
+                experience
+              </button>
+              <button className={Style.menu}>
+                portfolio
+              </button>
+            </div>
           </div>
           <div className={Style.wrapperConsole}>
             <div className={Style.console} onClick={onClickConsole}>
